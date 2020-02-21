@@ -22,7 +22,7 @@ function App() {
   const [members, setMembers] = useState([
     {
       id: 0,
-      name: "Taylor Reobuck",
+      name: "Taylor Roebuck",
       email: "taylornroebuck@gmail.com",
       role: "Full-Stack Developer"
     },

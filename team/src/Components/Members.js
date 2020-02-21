@@ -8,17 +8,26 @@ const MembersDiv = styled.div`
     padding: 2%;
     flex-wrap: wrap;
 `
+const SingleMemberDiv = styled.div`
+    background: white;
+    padding: 1%;
+`
+
+const MembersHeading = styled.h2`
+    color: #FFE5B4;
+
+`
 
 const Members = props => {
   return (
     <MembersDiv className="member-list">
       {props.members.map(member => (
-        <div className="member" key={member.id}>
-          <h2>Name: {member.name}</h2>
+        <SingleMemberDiv className="member" key={member.id}>
+          <MembersHeading>{member.name}</MembersHeading>
           <p>Email: {member.email}</p>
           <p>Role: {member.role}</p>
           <button>Edit</button>
-        </div>
+        </SingleMemberDiv>
       ))}
     </MembersDiv>
   );
