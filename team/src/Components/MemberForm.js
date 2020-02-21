@@ -3,9 +3,9 @@ import React, { useState } from "react";
 const MemberForm = props => {
     const [info, setInfo] = useState({
         id: '',
-        name: "initial name",
-        email: "initial email",
-        role: "initial role"
+        name: "",
+        email: "",
+        role: ""
     });
 
     const handleChanges = event => {

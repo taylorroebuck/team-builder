@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import MemberForm from './Components/MemberForm';
 import Members from './Components/Members';
+import styled from "styled-components";
+
+const MemberDiv = styled.div`
+    margin: 10%;
+    background: #FFE5B4;
+    padding: 1%;
+`
 
 // const teamMembers = [
 //   {
@@ -57,11 +64,11 @@ function App() {
       setMembers([...members, newInfo])
     };
   return (
-    <div className="App">
+    <MemberDiv className="App">
       <h1>Team Builder</h1>
       <MemberForm addNewInfo={addNewInfo} />
       <Members members={members} />
-    </div>
+    </MemberDiv>
   );
 }
 

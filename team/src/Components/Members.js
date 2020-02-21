@@ -1,8 +1,17 @@
 import React from "react";
+import styled from "styled-components";
+
+const MembersDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2%;
+    flex-wrap: wrap;
+`
 
 const Members = props => {
   return (
-    <div className="member-list">
+    <MembersDiv className="member-list">
       {props.members.map(member => (
         <div className="member" key={member.id}>
           <h2>Name: {member.name}</h2>
@@ -11,7 +20,7 @@ const Members = props => {
           <button>Edit</button>
         </div>
       ))}
-    </div>
+    </MembersDiv>
   );
 };
 
